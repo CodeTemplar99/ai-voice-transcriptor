@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1033654747894",
+    "project_id": "alindor-23640",
+    "storage_bucket": "alindor-23640.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033654747894:android:b01ee40489f8254c9362d7",
+        "android_client_info": {
+          "package_name": "com.example.alindortech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033654747894-h12ghocpc7pqda7qbelprsd1q59cvb5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alindortech",
+            "certificate_hash": "e9040688b4980d47a8a7c6dbd0054c8f0ebedf1f"
+          }
+        },
+        {
+          "client_id": "1033654747894-6e48dcm3f33rcfcabh6f94ib6u3udptj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeBkZXxBfzyJntT8McDsI5JRo3eCk4fMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033654747894-6e48dcm3f33rcfcabh6f94ib6u3udptj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1033654747894-25p9kroh79o2halmo3s8aqmh89e85d4s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.alindorTech"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
