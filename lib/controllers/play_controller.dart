@@ -8,7 +8,7 @@ class AudioPlayController with ChangeNotifier {
   bool isPlaying = false;
 
   // Initializes the audio controller asynchronously.
-  Future initAudioController() async {
+  Future initPlayController() async {
     await soundPlayController.openPlayer();
   }
 

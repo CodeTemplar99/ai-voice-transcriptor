@@ -1,26 +1,28 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
-import 'package:alindor_tech/configs/error_handler.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sound_stream/sound_stream.dart';
 import 'package:web_socket_channel/io.dart';
 
+import 'package:alindor_tech/configs/error_handler.dart';
+
 class RecordController with ChangeNotifier {
   FlutterSoundRecorder controller = FlutterSoundRecorder();
+  RecorderStream voiceStream = RecorderStream();
+
+  final String serverUrl =
+      'wss://api.deepgram.com/v1/listen?encoding=linear16&sample_rate=16000&language=en-GB';
+  final String apiKey = '<YOUR_DEEPGRAM_API_KEY>';
 
   late StreamSubscription recorderStatus;
   late StreamSubscription audioStream;
 
   late IOWebSocketChannel channel;
-  late RecorderStream voiceStream;
-
-  String serverUrl = dotenv.get('SERVER_URL');
-
-  String apiKey = dotenv.get('DEV_SK_KEY');
+  // late RecorderStream voiceStream;
 
   String savedRecordsPath = 'audio_example.aac';
 

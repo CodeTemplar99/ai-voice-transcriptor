@@ -17,13 +17,7 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  bool activeRecording = false;
-  late RecordController audioController;
-  late AudioPlayController soundPlayController;
-
   List<String> metricsTitle = ['Trust', 'Sentiment', 'Empathy', 'Charisma'];
-  String currentPoint = 'Trust';
-
   List<double> metricsValue = [0.5, 0.9, 0.1, 0.4];
   List<String> interests = [
     'Happiness',
@@ -49,18 +43,17 @@ class _ChatScreenState extends State<ChatScreen> {
   // Initializes the record controller stream and initializes the audio controller and sound play controller.
   void initState() {
     super.initState();
-    context.read<RecordController>().initStream();
+    RecordController();
     // initialize audio controller
-    audioController = context.read<RecordController>();
-    soundPlayController = context.read<AudioPlayController>();
-    audioController.initAudioController();
-    soundPlayController.initAudioController();
+    context.read<RecordController>().initAudioController();
+    context.read<RecordController>().initStream();
+    context.read<AudioPlayController>().initPlayController();
   }
 
   @override
   void dispose() {
     // dispose audio controller
-    audioController.controller.closeRecorder();
+    context.read<RecordController>().disposeAudioController();
     context.read<RecordController>().voiceStream.dispose();
     super.dispose();
   }
@@ -157,7 +150,9 @@ class _ChatScreenState extends State<ChatScreen> {
                                 const SizedBox(),
                               GestureDetector(
                                 onTap: () {
-                                  soundPlayController.togglePlay();
+                                  context
+                                      .read<RecordController>()
+                                      .toggleRecording(context);
                                 },
                                 child: context
                                         .watch<AudioPlayController>()
@@ -545,7 +540,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 color: Colors.white,
               ),
         onPressed: () {
-          audioController.toggleRecording(context);
+          context.read<RecordController>().toggleRecording(context);
         },
       ),
     );
