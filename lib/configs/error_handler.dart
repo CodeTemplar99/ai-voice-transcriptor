@@ -8,19 +8,13 @@ import 'package:google_fonts/google_fonts.dart';
 // The snackbar floats above the content, with a customizable margin.
 // It displays a message in a styled container with an icon and text.
 // Requires the BuildContext `context` and a `message` to display.
-Future<void> openTopSnackBar(
+Future<void> openSnackBar(
   BuildContext context,
   String message,
 ) async =>
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      dismissDirection: DismissDirection.up,
-      behavior: SnackBarBehavior.floating,
-      margin: EdgeInsets.only(
-          bottom: MediaQuery.of(context).size.height - 150,
-          left: 10,
-          right: 10),
       content: Container(
         width: getScreenHeight(327),
         padding: EdgeInsets.symmetric(
@@ -32,7 +26,7 @@ Future<void> openTopSnackBar(
         child: Center(
           child: Row(
             children: [
-              SvgPicture.asset('assets/svgs/icons/close_circle.svg'),
+              SvgPicture.asset('assets/icons/info_danger.svg'),
               SizedBox(
                 width: getScreenHeight(10),
               ),

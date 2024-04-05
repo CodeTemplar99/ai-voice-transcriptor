@@ -91,11 +91,10 @@ class RecordController with ChangeNotifier {
         isRecording = true;
         notifyListeners();
         log('message: Recording started');
-      } else {
-        openTopSnackBar(context, 'Recording Permission Denied');
-        log('message: Permission denied');
       }
     } catch (e) {
+      // ignore: use_build_context_synchronously
+      openSnackBar(context, 'Recording Permission Denied');
       log('Error occurred: $e');
     }
   }

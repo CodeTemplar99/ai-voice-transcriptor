@@ -11,7 +11,7 @@ class AuthService with ChangeNotifier {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   // A function that signs in a user with Google authentication. Takes in a context parameter. Returns a User object if sign-in is successful, otherwise returns null.
-  Future<User?> signInWithGoogle(context) async {
+  Future<User?> signInWithGoogle(BuildContext context) async {
     try {
       final GoogleSignInAccount? googleSignInAccount =
           await _googleSignIn.signIn();
@@ -27,6 +27,7 @@ class AuthService with ChangeNotifier {
         final UserCredential userCredential =
             await _auth.signInWithCredential(credential);
         Navigator.pushAndRemoveUntil(
+            // ignore: use_build_context_synchronously
             context,
             CupertinoPageRoute(builder: (_) => const ChatScreen()),
             (route) => false);
@@ -35,7 +36,8 @@ class AuthService with ChangeNotifier {
       }
     } catch (e) {
       log('Error signing in with Google: $e');
-      openTopSnackBar(context, 'Error signing in with Google');
+      // ignore: use_build_context_synchronously
+      openSnackBar(context, 'Error signing in with Google');
     }
     return null;
   }
