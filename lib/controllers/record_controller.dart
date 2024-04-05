@@ -88,6 +88,7 @@ class RecordController with ChangeNotifier {
               ),
             );
         voiceStream.start();
+        hasRecord = true;
         isRecording = true;
         notifyListeners();
         log('message: Recording started');
