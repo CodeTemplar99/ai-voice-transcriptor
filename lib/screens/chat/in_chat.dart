@@ -1,5 +1,6 @@
 import 'package:alindor_tech/configs/colors.dart';
 import 'package:alindor_tech/configs/dimension.dart';
+import 'package:audio_waveforms/audio_waveforms.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -151,8 +152,8 @@ class _ChatScreenState extends State<ChatScreen> {
                               GestureDetector(
                                 onTap: () {
                                   context
-                                      .read<RecordController>()
-                                      .toggleRecording(context);
+                                      .read<AudioPlayController>()
+                                      .togglePlay();
                                 },
                                 child: context
                                         .watch<AudioPlayController>()
