@@ -33,6 +33,7 @@ class RecordController with ChangeNotifier {
   bool? hasFinishedRecording;
 
   String transcript = '';
+  
 
   // Initialize the stream connection to the WebSocket channel with the provided server URL and API key in the headers.
   // Listen to the stream events, parse the JSON data, check for new transcripts, and update the transcript string accordingly.
