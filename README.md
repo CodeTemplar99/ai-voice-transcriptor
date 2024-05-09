@@ -2,11 +2,10 @@
 
 ## Overview
 
-This repository contains the completion of the test assignment provided by Alindor. The assignment required the development of a mobile application featuring two pages based on provided Figma designs. The first page facilitates Google sign-in via Firebase. In contrast, the second page, "IndRecord," serves the purpose of recording audio and processing it with AI insights from the OpenAI API.
+This repository contains the code for a speech-to-text AI application. The first page facilitates Google sign-in via Firebase. In contrast, the second page, "IndRecord," serves the purpose of recording audio and processing it with AI insights from the OpenAI API.
 
 ## Project Structure
 
-- **Figma Designs**: The Figma designs provided by the hiring team are accessible via this [link](https://1drv.ms/u/s!AlpJiFHTWG8ijgfEFSk1h4-2kjQv?e=MByWZS).
 - **Audio Recordings**: Audio recordings can be made by the hiring manager through the application.
 - **APIs**: The project integrates two APIs:
   - **Deepgram API**: Utilized for Speech to Text functionality.
@@ -58,7 +57,7 @@ This repository contains the completion of the test assignment provided by Alind
 
 ## Deployment
 
-The mobile application has been deployed on Google Drive [APK link](https://drive.google.com/file/d/1oh-loSQWCrwU4j1FqVpKe9nuKYS02nMY/view?usp=sharing) and is available for installation on Android devices. The hiring manager can install the application to test its functionality.
+The mobile application has been deployed on Google Drive [APK link](https://drive.google.com/file/d/1oh-loSQWCrwU4j1FqVpKe9nuKYS02nMY/view?usp=sharing) and is available for installation on Android devices. 
 
 ## Usage
 
