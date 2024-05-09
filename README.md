@@ -10,7 +10,6 @@ This repository contains the code for a speech-to-text AI application. The first
 - **APIs**: The project integrates two APIs:
   - **Deepgram API**: Utilized for Speech to Text functionality.
   - **OpenAI API**: Utilized for AI insights such as transcription and summary generation.
-- **MVP Reference**: A link to the current MVP provided by the company for a deeper understanding of the project is accessible [here](https://1drv.ms/f/s!AlpJiFHTWG8ijT1-_Do-ylWF04fQ).
 
 ## Installation Steps
 
