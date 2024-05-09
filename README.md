@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the code for a speech-to-text AI application. The first page facilitates Google sign-in via Firebase. In contrast, the second page, "IndRecord," serves the purpose of recording audio and processing it with AI insights from the OpenAI API.
+This repository contains the code for a speech-to-text AI application. The first page facilitates Google sign-in via Firebase. The second page, "IndRecord," serves the purpose of recording audio and processing it with AI insights from the OpenAI API.
 
 ## Project Structure
 
@@ -52,7 +52,7 @@ This repository contains the code for a speech-to-text AI application. The first
 
 1. **Deepgram API Integration**: The application utilizes the Deepgram API for speech-to-text conversion. The API provides $200 credits without a credit card requirement.
 2. **OpenAI API Integration**: The application utilizes Deepgram's API for transcription and summary generation.
-3. **Functionality**: The application provides full transcription and summary of the recorded audio. Other sections such as sentiment analysis, speaker quotes, personality scores, and traits are hard coded. The UI/UX front is developed according to the Figma design with dynamic functionality, especially for text extension upon click. Long hardcoded text is incorporated to test scrolling functionality.
+3. **Functionality**: The application provides full transcription and summary of the recorded audio. Other sections such as sentiment analysis, speaker quotes, personality scores, and traits are hard coded.
 4. **UI/UX Modification**: The "IndRecord" page's UI/UX design has been modified according to the developer's vision to enhance user experience and aesthetic appeal.
 
 ## Deployment
